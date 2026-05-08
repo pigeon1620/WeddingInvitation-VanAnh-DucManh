@@ -29,6 +29,9 @@ button, input, select, textarea { font: inherit; }
 button { cursor: pointer; }
 .hidden { display: none !important; }
 
+.cover-names span {
+  display: block;
+}
 .cover-screen {
   min-height: 100vh;
   position: relative;
@@ -98,7 +101,7 @@ button { cursor: pointer; }
   padding: 80px 30px;
   text-align: center;
   background:
-    linear-gradient(rgba(255, 252, 248, 0.91), rgba(255, 252, 248, 0.87)),
+    linear-gradient(rgba(255, 252, 248, 0.5), rgba(255, 252, 248, 0.7)),
     url("../images/backgrounds/section-wave.svg") center / cover no-repeat;
 }
 .eyebrow {

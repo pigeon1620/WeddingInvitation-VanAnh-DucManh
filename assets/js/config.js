@@ -16,7 +16,7 @@ window.WEDDING_CONFIG = {
   text: {
     coverEyebrow: "Wedding Invitation",
     openButton: "Mở thiệp",
-    heroEyebrow: "Trân trọng kính mời",
+    heroEyebrow: "Trân trọng kính mời khách quý tới dự tiêc cưới",
     heroDescription: "Chúng tôi rất hạnh phúc được mời bạn đến chung vui trong ngày đặc biệt của hai gia đình.",
     storyEyebrow: "Our Story",
     storyTitle: "Câu chuyện tình yêu",
@@ -32,7 +32,7 @@ window.WEDDING_CONFIG = {
   },
 
   images: {
-    cover: "assets/images/cover.svg",
+    // cover: "assets/images/wallpaper.jpg",
     couple: "assets/images/main_couple.jpg",
     gift: "assets/images/d3.svg",
     thanks: "assets/images/d4.svg"
@@ -101,10 +101,10 @@ window.WEDDING_CONFIG = {
   ],
 
   album: [
-    { src: "assets/images/c1.svg", alt: "Ảnh album 1" },
+    { src: "assets/images/album_1.jpg", alt: "Ảnh album 1" },
     { src: "assets/images/album_2.jpg", alt: "Ảnh album 2" },
-    { src: "assets/images/c3.svg", alt: "Ảnh album 3" },
-    { src: "assets/images/c4.svg", alt: "Ảnh album 4" },
+    { src: "assets/images/album_3.jpg", alt: "Ảnh album 3" },
+    { src: "assets/images/album_4.jpg", alt: "Ảnh album 4" },
     { src: "assets/images/album_5.jpg", alt: "Ảnh album 5" },
     { src: "assets/images/album_6.jpg", alt: "Ảnh album 6" }
   ],

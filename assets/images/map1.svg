@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1600" viewBox="0 0 1200 1600">
-  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#64748b"/><stop offset="100%" stop-color="#0ea5e9"/></linearGradient></defs>
-  <rect width="1200" height="1600" fill="url(#g)"/>
-  <circle cx="170" cy="190" r="120" fill="#fff" opacity=".20"/><circle cx="1020" cy="300" r="170" fill="#fff" opacity=".18"/><circle cx="240" cy="1350" r="190" fill="#fff" opacity=".14"/>
-  <rect x="120" y="290" width="960" height="1010" rx="56" fill="#fff" opacity=".22"/>
-  <text x="600" y="710" text-anchor="middle" font-family="Georgia, serif" font-size="82" fill="#fff" font-weight="700">D1</text>
-  <text x="600" y="815" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" fill="#fff" opacity=".92">Khu vuc nha trai</text>
-  <text x="600" y="935" text-anchor="middle" font-family="Georgia, serif" font-size="44" fill="#fff" opacity=".9">Anh mau - thay bang anh that</text>
-</svg>
