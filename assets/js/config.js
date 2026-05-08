@@ -102,11 +102,11 @@ window.WEDDING_CONFIG = {
 
   album: [
     { src: "assets/images/c1.svg", alt: "Ảnh album 1" },
-    { src: "assets/images/album2.jpg", alt: "Ảnh album 2" },
+    { src: "assets/images/Album2.jpg", alt: "Ảnh album 2" },
     { src: "assets/images/c3.svg", alt: "Ảnh album 3" },
     { src: "assets/images/c4.svg", alt: "Ảnh album 4" },
-    { src: "assets/images/album5.jpg", alt: "Ảnh album 5" },
-    { src: "assets/images/album6.jpg", alt: "Ảnh album 6" }
+    { src: "assets/images/Album5.jpg", alt: "Ảnh album 5" },
+    { src: "assets/images/Album6.jpg", alt: "Ảnh album 6" }
   ],
 
   bank: {
