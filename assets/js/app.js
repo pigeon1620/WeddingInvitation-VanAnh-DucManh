@@ -1,4 +1,14 @@
 const config = window.WEDDING_CONFIG || {};
+config.text = config.text || {};
+config.couple = config.couple || {};
+config.dates = config.dates || {};
+config.images = config.images || {};
+config.ui = config.ui || {};
+config.ui.sections = config.ui.sections || {};
+config.ui.blocks = config.ui.blocks || {};
+config.events = Array.isArray(config.events) ? config.events : [];
+config.album = Array.isArray(config.album) ? config.album : [];
+config.bank = config.bank || {};
 
 const cover = document.getElementById("cover");
 const mainContent = document.getElementById("mainContent");
@@ -24,7 +34,12 @@ function text(id, value) {
 
 function attr(id, name, value) {
   const el = $(id);
-  if (el && value) el.setAttribute(name, value);
+  if (!el) return;
+  if (value) {
+    el.setAttribute(name, value);
+  } else {
+    el.removeAttribute(name);
+  }
 }
 
 function on(id, eventName, handler) {
@@ -50,6 +65,19 @@ function setHidden(id, hidden) {
 
 function getSelectedEvent() {
   return config.events.find(event => event.key === selectedEventKey) || config.events[0] || {};
+}
+
+function getCeremony(event) {
+  if (!event) return {};
+  return event.ceremony || {
+    title: event.title || "",
+    time: event.time || ""
+  };
+}
+
+function getReception(event) {
+  if (!event) return {};
+  return event.reception || {};
 }
 
 function applyVisibilityConfig() {
@@ -83,6 +111,10 @@ function renderConfig() {
   text("heroDate", config.dates.displayDate);
   text("heroDescription", config.text.heroDescription);
 
+  text("invitationEyebrow", config.text.invitationEyebrow || "Together With Their Families");
+  text("invitationTitle", config.text.invitationTitle || "Lễ thành hôn");
+  text("invitationDescription", config.text.invitationDescription || "Chúng tôi trân trọng kính mời bạn đến tham dự lễ cưới và chung vui cùng gia đình.");
+
   text("eventEyebrow", config.text.eventEyebrow);
   text("eventTitle", config.text.eventTitle);
   text("albumEyebrow", config.text.albumEyebrow);
@@ -112,12 +144,16 @@ function renderInviteSummary() {
   if (!inviteGrid) return;
 
   const selectedEvent = getSelectedEvent();
+  const ceremony = getCeremony(selectedEvent);
+  const reception = getReception(selectedEvent);
+
+  // Tiệc cưới
   inviteGrid.innerHTML = `
     <div>
-      <span>Thời gian</span>
-      <strong>${escapeHtml(selectedEvent.time || config.dates.coverDate)}</strong>
+      <span>Tiệc cưới</span>
+      <strong>${escapeHtml(reception.time || "Đang cập nhật")}</strong>
     </div>
-    <div>
+    <div class="invite-address">
       <span>Địa điểm</span>
       <strong>${escapeHtml(selectedEvent.address || "")}</strong>
     </div>
@@ -153,18 +189,27 @@ function renderEventSelector() {
   });
 }
 
+// Render cho lễ thành hôn và tiệc cưới. Nếu có 2 sự kiện, mặc định sẽ hiển thị sự kiện của nhà gái. Khách mời có thể chọn xem thông tin của nhà trai nếu muốn.
 function renderEvents() {
   const eventGrid = $("eventGrid");
   if (!eventGrid) return;
 
   const selectedEvent = getSelectedEvent();
+  const ceremony = getCeremony(selectedEvent);
+  const reception = getReception(selectedEvent);
+
   eventGrid.innerHTML = `
     <article class="event-card">
-      <img src="${escapeHtml(selectedEvent.image || "")}" alt="${escapeHtml(selectedEvent.imageAlt || selectedEvent.title || "")}" />
+      <img src="${escapeHtml(selectedEvent.image || "")}" alt="${escapeHtml(selectedEvent.imageAlt || selectedEvent.label || "")}" />
+      
       <div>
         <span class="badge">${escapeHtml(selectedEvent.label || "")}</span>
-        <h4>${escapeHtml(selectedEvent.title || "")}</h4>
-        <p><b>Thời gian:</b> ${escapeHtml(selectedEvent.time || "")}</p>
+
+        <div class="event-time-block">
+          <h4>${escapeHtml(ceremony.title || "Lễ thành hôn")}</h4>
+          <p><b>Thời gian:</b> ${escapeHtml(ceremony.time || "")}</p>
+        </div>
+
         <p><b>Địa điểm:</b> ${escapeHtml(selectedEvent.address || "")}</p>
         <a class="outline-btn" href="${escapeHtml(selectedEvent.mapUrl || "#")}" target="_blank" rel="noreferrer">Xem bản đồ</a>
       </div>

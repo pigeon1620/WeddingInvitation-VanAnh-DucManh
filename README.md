@@ -105,3 +105,42 @@ Project có một test nhỏ cho helper cấu hình, chạy bằng Windows Scrip
 ```powershell
 cscript //nologo tests\config-utils.test.js
 ```
+
+
+## Fix 2026-05-09
+
+- Mobile album đã được ép về 1 cột bằng CSS override cuối file.
+- Thanks card dùng nền đặc để không bị ảnh album/background chèn vào.
+- Invitation trong section story đã render text từ `assets/js/config.js`:
+  - `text.invitationEyebrow`
+  - `text.invitationTitle`
+  - `text.invitationDescription`
+- index.html đã thêm cache-buster `?v=20260509` cho CSS/JS để GitHub Pages ít bị cache file cũ.
+
+
+## Event model update
+
+Mỗi event giờ tách riêng:
+- `ceremony`: thông tin lễ thành hôn / lễ vu quy
+- `reception`: thông tin tiệc cưới
+- `address`, `mapUrl`, `image`: dùng chung cho cả hai mốc nếu cùng địa điểm
+
+Ví dụ:
+
+```js
+{
+  key: "bride",
+  label: "Nhà gái",
+  ceremony: {
+    title: "Lễ vu quy - Nhà gái",
+    time: "07:00, 25/05/2026"
+  },
+  reception: {
+    title: "Tiệc cưới - Nhà gái",
+    time: "18:00, 24/05/2026"
+  },
+  address: "...",
+  mapUrl: "...",
+  image: "..."
+}
+```
