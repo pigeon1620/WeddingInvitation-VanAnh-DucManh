@@ -9,7 +9,7 @@
 </head>
 <body>
   <audio id="bgMusic" loop preload="auto">
-    <source src="assets/audio/wedding-theme.wav" type="audio/wav" />
+    <source src="assets/audio/Bruno Mars - Marry You (Official Lyric Video).mp3" type="audio/mpeg" />
   </audio>
 
   <section id="cover" class="cover-screen">
@@ -53,20 +53,14 @@
       <div class="photo-frame tall">
         <img id="coupleImage" src="" alt="Ảnh cô dâu chú rể" />
       </div>
-      <div class="panel-card content-card">
-        <p id="storyEyebrow" class="eyebrow"></p>
-        <h3 id="storyTitle"></h3>
-        <p id="storyIntro"></p>
-        <div id="storyList" class="timeline"></div>
-      </div>
-    </section>
+      <div id="invitation" class="panel-card content-card invitation-side">
+        <p class="eyebrow">Together With Their Families</p>
+        <h3>Lễ thành hôn</h3>
+        <p>Chúng tôi trân trọng kính mời bạn đến tham dự lễ cưới và chung vui cùng gia đình.</p>
 
-    <section id="invitation" class="section invitation panel-card">
-      <p class="eyebrow">Together With Their Families</p>
-      <h3>Lễ thành hôn</h3>
-      <p>Chúng tôi trân trọng kính mời bạn đến tham dự lễ cưới và chung vui cùng gia đình.</p>
-      <div id="eventSelector" class="event-selector"></div>
-      <div id="inviteGrid" class="invite-grid"></div>
+        <div id="eventSelector" class="event-selector"></div>
+        <div id="inviteGrid" class="invite-grid"></div>
+      </div>
     </section>
 
     <section id="event" class="section">
@@ -136,7 +130,6 @@
 
     <section id="thanks" class="section thanks">
       <div class="panel-card thanks-card">
-        <img id="thanksImage" src="" alt="Ảnh cảm ơn" />
         <p class="eyebrow">Thank You</p>
         <h3 id="thanksTitle"></h3>
         <p id="thanksMessage"></p>
@@ -150,7 +143,6 @@
   </dialog>
 
   <script src="assets/js/config.js"></script>
-  <script src="assets/js/config-utils.js"></script>
   <script src="assets/js/app.js"></script>
 </body>
 </html>

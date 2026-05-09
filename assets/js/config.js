@@ -16,7 +16,7 @@ window.WEDDING_CONFIG = {
   text: {
     coverEyebrow: "Wedding Invitation",
     openButton: "Mở thiệp",
-    heroEyebrow: "Trân trọng kính mời khách quý tới dự tiêc cưới",
+    heroEyebrow: "Trân trọng kính mời khách quý tới dự tiệc cưới",
     heroDescription: "Chúng tôi rất hạnh phúc được mời bạn đến chung vui trong ngày đặc biệt của hai gia đình.",
     storyEyebrow: "Our Story",
     storyTitle: "Câu chuyện tình yêu",
@@ -32,17 +32,15 @@ window.WEDDING_CONFIG = {
   },
 
   images: {
-    // cover: "assets/images/wallpaper.jpg",
+    cover: "assets/images/backgrounds/background1.svg",
     couple: "assets/images/main_couple.jpg",
     gift: "assets/images/d3.svg",
-    thanks: "assets/images/d4.svg"
+    thanks: ""
   },
 
   ui: {
-    // Chon buoi le mac dinh: "groom" hoac "bride"
     selectedEventKey: "bride",
     sections: {
-      // true = hien, false = an ca section
       story: true,
       invitation: true,
       event: true,
@@ -52,9 +50,7 @@ window.WEDDING_CONFIG = {
       thanks: true
     },
     blocks: {
-      // An/hien nut chon Nha trai / Nha gai trong block Le thanh hon
       eventSelector: true,
-      // An/hien box tai khoan ngan hang trong section Gui loi chuc
       bankInfo: true
     }
   },
@@ -84,8 +80,8 @@ window.WEDDING_CONFIG = {
       title: "Lễ tân hôn - Nhà trai",
       time: "12:00, 25/05/2026",
       address: "Khu 7, Xã Thanh Thuỷ, Tỉnh Phú Thọ",
-      mapUrl: "https://www.google.com",
-      image: "assets/images/map1.svg",
+      mapUrl: "https://www.google.com/maps/place/21%C2%B010'27.7%22N+105%C2%B016'41.9%22E/@21.1712979,105.2729513,15z/data=!4m4!3m3!8m2!3d21.1743611!4d105.2783056!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDUwNi4wIKXMDSoASAFQAw%3D%3D",
+      image: "assets/images/map_groom.png",
       imageAlt: "Ảnh nhà trai"
     },
     {
@@ -103,10 +99,7 @@ window.WEDDING_CONFIG = {
   album: [
     { src: "assets/images/album_1.jpg", alt: "Ảnh album 1" },
     { src: "assets/images/album_2.jpg", alt: "Ảnh album 2" },
-    { src: "assets/images/album_3.jpg", alt: "Ảnh album 3" },
-    { src: "assets/images/album_4.jpg", alt: "Ảnh album 4" },
-    { src: "assets/images/album_5.jpg", alt: "Ảnh album 5" },
-    { src: "assets/images/album_6.jpg", alt: "Ảnh album 6" }
+    { src: "assets/images/album_3.jpg", alt: "Ảnh album 3" }
   ],
 
   bank: {
