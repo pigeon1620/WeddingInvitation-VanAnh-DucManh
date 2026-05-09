@@ -144,3 +144,13 @@ Ví dụ:
   image: "..."
 }
 ```
+
+
+## Final event display logic
+
+- Phần `Tiệc cưới` cạnh ảnh couple chỉ hiển thị 1 nhà.
+- Nhà được chọn bằng `config.ui.selectedEventKey` trong `assets/js/config.js`:
+  - `"bride"`: hiển thị tiệc cưới Nhà gái
+  - `"groom"`: hiển thị tiệc cưới Nhà trai
+- Phần `Thông tin buổi lễ` hiển thị cả 2 nhà, nhưng chỉ lấy thông tin `ceremony`, không lấy `reception`.
+- Selector Nhà trai/Nhà gái trên giao diện đã được ẩn; lựa chọn nằm trong config.
