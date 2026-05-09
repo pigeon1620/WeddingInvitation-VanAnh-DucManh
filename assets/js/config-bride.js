@@ -74,7 +74,7 @@ window.WEDDING_CONFIG = {
           },
     
           address: "Thôn Đông Hải, Phường Trần Lãm, Tỉnh Hưng Yên (Xã Vũ Chính, Thành phố Thái Bình, Tỉnh Thái Bình cũ)",
-          mapUrl: "https://www.google.com/maps/dir/21.0280115,105.9449027/20.4294765,106.3586792/@20.7286297,105.817904,10z/data=!3m1!4b1!4m6!4m5!1m1!4e1!1m1!4e1!3e0!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDUwMi4wIKXMDSoASAFQAw%3D%3D",
+          mapUrl: "https://www.google.com/maps/place/20%C2%B025'46.1%22N+106%C2%B021'31.3%22E/@20.4314536,106.3560483,16.25z/data=!4m4!3m3!8m2!3d20.4294722!4d106.3586944!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDUwNi4wIKXMDSoASAFQAw%3D%3D",
           image: "../assets/images/map_bride.png",
           imageAlt: "Bản đồ nhà gái"
         },
@@ -89,7 +89,7 @@ window.WEDDING_CONFIG = {
     
           reception: {
             title: "Tiệc cưới - Nhà trai",
-            time: "12:00, 25/05/2026"
+            time: "16:00, 24/05/2026"
           },
     
           address: "Khu 7, Xã Thanh Thuỷ, Tỉnh Phú Thọ",
