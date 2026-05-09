@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <link rel="icon" type="image/png" href="assets/images/icon/heart.png">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thiệp Cưới - Đức Mạnh & Vân Anh</title>
+  <meta name="description" content="Chọn thiệp cưới Nhà trai hoặc Nhà gái." />
+  <link rel="icon" type="image/png" href="assets/images/favicon.png?v=20260509e" />
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@600;700&family=Inter:wght@400;600;800&display=swap");
+
+    :root {
+      --paper: rgba(255, 252, 248, 0.9);
+      --text: #4d362a;
+      --muted: #8d6f60;
+      --gold: #bd8b4b;
+      --rose: #b97882;
+      --border: rgba(189, 139, 75, 0.28);
+      --shadow: 0 22px 66px rgba(79, 51, 34, 0.15);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, system-ui, sans-serif;
+      color: var(--text);
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background:
+        linear-gradient(rgba(255, 250, 244, 0.58), rgba(255, 250, 244, 0.82)),
+        url("assets/images/backgrounds/background1.svg") center / cover fixed no-repeat,
+        #faf5ef;
+    }
+
+    .shell {
+      width: min(900px, 100%);
+      text-align: center;
+      background:
+        linear-gradient(rgba(255, 252, 248, 0.86), rgba(255, 252, 248, 0.92)),
+        url("assets/images/backgrounds/section-wave.svg") center / cover no-repeat;
+      border: 1px solid var(--border);
+      border-radius: 36px;
+      padding: clamp(32px, 6vw, 64px);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(8px);
+    }
+
+    .script {
+      font-family: "Great Vibes", cursive;
+      font-size: clamp(38px, 8vw, 70px);
+      color: var(--gold);
+      margin: 0 0 8px;
+      line-height: 1;
+    }
+
+    h1 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(42px, 9vw, 88px);
+      line-height: 1.04;
+      margin: 0 0 16px;
+      color: var(--text);
+    }
+
+    .amp {
+      color: var(--rose);
+    }
+
+    .desc {
+      margin: 0 auto 28px;
+      max-width: 650px;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 26px;
+    }
+
+    .card-link {
+      display: grid;
+      gap: 8px;
+      align-content: center;
+      min-height: 150px;
+      text-decoration: none;
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 24px;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+    }
+
+    .card-link:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 42px rgba(79, 51, 34, 0.14);
+      background: rgba(255, 255, 255, 0.92);
+    }
+
+    .label {
+      font-size: 12px;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-weight: 800;
+    }
+
+    .title {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 700;
+    }
+
+    .hint {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    footer {
+      margin-top: 26px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 680px) {
+      body {
+        padding: 14px;
+      }
+
+      .shell {
+        padding: 34px 18px;
+        border-radius: 28px;
+      }
+
+      .actions {
+        grid-template-columns: 1fr;
+      }
+
+      .card-link {
+        min-height: 128px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <p class="script">Wedding Invitation</p>
+    <p class="desc">
+      Trân trọng kính mời bạn chọn đúng thiệp mời để xem thông tin tiệc cưới và buổi lễ.
+    </p>
+
+    <div class="actions">
+      <a class="card-link" href="Groom/">
+        <span class="label">Nhà trai</span>
+        <span class="title">Thiệp chú rể</span>
+        <span class="hint">Tiệc cưới tại nhà trai, thứ tự buổi lễ ưu tiên Nhà trai.</span>
+      </a>
+
+      <a class="card-link" href="Bride/">
+        <span class="label">Nhà gái</span>
+        <span class="title">Thiệp cô dâu</span>
+        <span class="hint">Tiệc cưới tại nhà gái, thứ tự buổi lễ ưu tiên Nhà gái.</span>
+      </a>
+    </div>
+
+    <footer>Chúc mừng ngày vui của hai gia đình.</footer>
+  </main>
+</body>
+</html>

@@ -154,3 +154,16 @@ Ví dụ:
   - `"groom"`: hiển thị tiệc cưới Nhà trai
 - Phần `Thông tin buổi lễ` hiển thị cả 2 nhà, nhưng chỉ lấy thông tin `ceremony`, không lấy `reception`.
 - Selector Nhà trai/Nhà gái trên giao diện đã được ẩn; lựa chọn nằm trong config.
+
+
+## Split Bride/Groom
+
+Project có 2 webapp riêng:
+- `Bride/index.html` dùng `assets/js/config-bride.js`
+- `Groom/index.html` dùng `assets/js/config-groom.js`
+
+Vì `index.html` nằm trong thư mục con nên các link asset trong HTML đã đổi sang `../assets/...`.
+
+Logic:
+- Bride: tiệc cưới = Nhà gái, tiêu đề `Tiệc cưới tại nhà gái`, thứ tự buổi lễ: Nhà gái bên trái/trước, Nhà trai bên phải/sau.
+- Groom: tiệc cưới = Nhà trai, tiêu đề `Tiệc cưới tại nhà trai`, thứ tự buổi lễ: Nhà trai bên trái/trước, Nhà gái bên phải/sau.
